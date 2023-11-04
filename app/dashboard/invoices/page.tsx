@@ -8,12 +8,10 @@ import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import type { InvoicesPageProps } from '@/app/lib/types';
 import { fetchInvoicesPages } from '@/app/lib/data';
 
-const inovicesPagePath = '/dashboard/invoices'
 const InvoicesPage = async  ({
     searchParams,
-    ...rest
   }: InvoicesPageProps) => {
-  const {query, page: currentPage=1} = searchParams
+  const {query = '', page: currentPage = 1} = searchParams
   const totalPages = await fetchInvoicesPages(query)
 
     return (
