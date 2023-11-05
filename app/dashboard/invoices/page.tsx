@@ -7,6 +7,11 @@ import { lusitana } from '@/app/ui/fonts';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import type { InvoicesPageProps } from '@/app/lib/types';
 import { fetchInvoicesPages } from '@/app/lib/data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Invoices',
+};
 
 const InvoicesPage = async  ({
     searchParams,
